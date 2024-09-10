@@ -1,0 +1,72 @@
+:root {
+    --color-1: lightyellow;
+    /* fuentes */
+    --color-2: #a98467;
+    --color-3: #adc178;
+    --color-4: darkorange;
+    /* background-color: ; */
+    --color-5: #ffff;
+    --color-6: #c3c3c3;
+}
+
+
+*{margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+}
+
+box{
+    width :40vh;
+    height:  40 vh;
+    
+}
+
+body{
+    background-color: lightyellow;
+    /* width: fit-content; */
+}
+.tarjetero{
+    width: 500px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+
+}
+.tarjeta{
+padding: 30px;
+    background-color: mediumaquamarine;
+    border-radius: 8px;
+    flex:1;
+    /*min-width: 200px;*/
+    box-shadow: black;
+
+}
+input{
+    width: 300px;
+}
+
+
+h1{
+    padding-top: 15px;
+    color:var(--color-2) ;
+    }
+
+    /*formulario clientes y juegos*/
+.name{
+    font-size: 25px;
+}
+
+/* .forAgregaCliente {
+     background-color: rgb(90, 114, 157); 
+         color: white; 
+    width: 40%;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+} */

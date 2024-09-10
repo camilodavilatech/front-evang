@@ -1,0 +1,200 @@
+:root {
+    --color-1: #dde5b6;
+    /* fuentes */
+    --color-2: #a98467;
+    --color-3: lightyellow;
+    --color-4: darkorange;
+    /* background-color: ; */
+    --color-5: #ffff;
+    --color-6: #c3c3c3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    color: var(--color-2);
+    margin: 0;
+    background-color: var(--color-3);
+
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: var(--color-2);
+}
+
+p {
+    font-size: 1em;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: 1.5em;
+}
+
+header .contenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1400px;
+    margin: auto;
+    min-height: fit-content;
+
+
+}
+/* header .contenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+} */
+
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+
+.color {
+    color: lightseagreen;
+}
+
+header {
+
+    /* background-color: lightblue; */
+    width: 100%;
+}
+
+header .logo {
+    margin: 0;
+    padding: 25px;
+    font-weight: bold;
+    color: var(--color-2);
+    font-size: 2.5em;
+
+}
+
+
+
+
+header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+
+
+}
+
+.contenedor img {
+    height: 100px;
+}
+
+.contenedor {
+    max-width: 1400px;
+    margin: 0;
+    min-height: fit-content;
+}
+
+.color {
+    color: lightseagreen;
+}
+
+.marco{
+    margin : 0;
+}
+
+header .pNav {
+    margin: 0;
+    padding: 25px;
+    font-weight: bold;
+
+}
+
+header .contenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+}
+
+
+header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-2);
+
+
+}
+
+
+
+
+.nav-elemento {
+    display: inline-block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: var(--color-1);
+    color: var(--color-2);
+    padding: 10px 30px;
+    
+
+}
+
+
+
+
+
+.nav-elemento a {
+    color: blueviolet;
+}
+
+.nav-elemento:hover {
+    background-color: lightgreen;
+}
+
+
+
+@media screen and (max-width: 400px) {
+    .cobertor {
+        display: flex;
+        flex-direction: row;
+        width: 250px;
+    }
+
+}
+
+.cobertor>* {
+    flex: 1;
+}
+
+.con1 {
+    flex: 2;
+}
+
+@media screen and (max-width: 800px) {
+    .cobertor {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
