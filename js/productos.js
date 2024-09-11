@@ -68,7 +68,7 @@ function guardarProductos() {
 
 function cargarDatos(id) {
     if (id != null) {
-      alert("entra por cargar Datos");
+        alert("entra por cargar Datos");
 
         let request = sendRequest('productos/' + id, 'GET', '');
 
@@ -77,7 +77,7 @@ function cargarDatos(id) {
         let vig = document.getElementById("vigente-n")
         let lin = document.getElementById("linea-n")
 
-alert("paso por carga");
+        alert("paso por carga");
         request.onload = function () {
 
             let data = request.response;
@@ -86,7 +86,7 @@ alert("paso por carga");
             vig.value = data.vigente
             lin.value = data.linea
 
-            console.log('en cargar nombre '+ nom.value +  ' valor '+ val.value  + ' vigente ' +  vig.value +  ' linea '+ lin.value + " id: "+ id);
+            console.log('en cargar nombre ' + nom.value + ' valor ' + val.value + ' vigente ' + vig.value + ' linea ' + lin.value + " id: " + id);
 
             console.log(data)
         }
@@ -104,14 +104,14 @@ function modificarProductos(id) {
     let val = document.getElementById("valor-n").value
     let vig = document.getElementById("vigente-n").value
     let lin = document.getElementById("linea-n").value
-    let data = { 'nombre': nom, 'valor': val, 'vigente': vig, 'linea': lin}
+    let data = { 'nombre': nom, 'valor': val, 'vigente': vig, 'linea': lin }
 
-console.log("modificar id" + id + "nom" + nom)
+    console.log("modificar id" + id + "nom" + nom)
     console.log("en modificar productos ruta" + 'productos/' + id, 'PUT', data)
-console.log("en modificar data  ="+ request)
+    console.log("en modificar data  =" + request)
 
 
-let request = sendRequest('productos/' + id, 'PUT', data);
+    let request = sendRequest('productos/' + id, 'PUT', data);
     console.log(request)
     request.onload = function () {
         window.location = 'productos.html'

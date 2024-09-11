@@ -41,77 +41,78 @@
                 </div>
             </div>
         </nav>
-        </header>
+    </header>
 
-        <section class="container">
+    <section class="container">
 
-            <div class="row align-items-center mb-4">
-                <span class="fw-bold w-auto" onclick=""> Formulario Clientes</span>
-            </div>
-            <div class="row">
-                <form class="mt-4">
+        <div class="row align-items-center mb-4">
+            <span class="fw-bold w-auto" onclick=""> Formulario Clientes</span>
+        </div>
+        <div class="row">
+            <form class="mt-4">
 
-                    <div class="mb-3">
-                        <label for="nombres" class="form-label">Nombres</label>
-                        <input type="text" class="form-control" id="nombre-n">
-                        </label>
-                    </div>
+                <div class="mb-3">
+                    <label for="nombres" class="form-label">Nombres</label>
+                    <input type="text" class="form-control" id="nombre-n">
+                    </label>
+                </div>
 
-                    <div class="mb-3">
-                        <label for="apellidos" class="form-label">Apellidos</label>
-                        <input type="text" class="form-control" id="apellidos-n">
-                        </label>
-                    </div>
+                <div class="mb-3">
+                    <label for="apellidos" class="form-label">Apellidos</label>
+                    <input type="text" class="form-control" id="apellidos-n">
+                    </label>
+                </div>
 
-                    <div class="mb-3">
-                        <label for="documento" class="form-label">Documento</label>
-                        <input type="number" class="form-control" id="documento-n">
-                        </label>
-                    </div>
+                <div class="mb-3">
+                    <label for="documento" class="form-label">Documento</label>
+                    <input type="number" class="form-control" id="documento-n">
+                    </label>
+                </div>
 
-                    <div class="mb-3">
-                        <label for="correo" class="form-label">Correo</label>
-                        <input type="text" class="form-control" id="correo-n">
-                        </label>
-                    </div>
+                <div class="mb-3">
+                    <label for="correo" class="form-label">Correo</label>
+                    <input type="text" class="form-control" id="correo-n">
+                    </label>
+                </div>
 
-                    <div class="mb-3">
-                        <label for="telefono" class="form-label">Telefono</label>
-                        <input type="number" class="form-control" id="telefono-n">
-                        </label>
-                    </div>
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Telefono</label>
+                    <input type="number" class="form-control" id="telefono-n">
+                    </label>
+                </div>
 
-                    <div class="mb-3">
-                        <label for="direccion" class="form-label">Direccion</label>
-                        <input type="text" class="form-control" id="direccion-n">
-                        </label>
-                    </div>
+                <div class="mb-3">
+                    <label for="direccion" class="form-label">Direccion</label>
+                    <input type="text" class="form-control" id="direccion-n">
+                    </label>
+                </div>
 
-                    <button type="submit" class="btn btn-primary" onclick="guardarClientes()">Guardar</button>
-                    <!-- <button type="button" class="btn btn-primary" onclick="modificarClientes(id)">Editar</button> -->
-                    <button type="submit" class="btn btn-primary" id="btn-editar" >Editar</button>
+                <button type="submit" class="btn btn-primary" onclick="guardarClientes()">Guardar</button>
+                <!-- <button type="button" class="btn btn-primary" onclick="modificarClientes(id)">Editar</button> -->
+                <button type="button" class="btn btn-primary" id="btn-editar">Editar</button>
 
 
-                </form>
-            </div>
+            </form>
+        </div>
 
-        </section>
-        <script src="js/request.js"></script>
-        <script src="js/clientes.js"></script>
+    </section>
+    <script src="js/request.js"></script>
+    <script src="js/clientes.js"></script>
 
-        <script>
-            // funcion para cargar datos
-//            1:00:00 tutoria del 30 de agosto anulo lo anterior y dejó:
-            window.onload = function() {
-                let boton   = document.getElementById('btn-editar')
-                const url = new URLSearchParams (window.location.search);
-                cargarDatos(url.get('id'));
-                boton.onclick=()=>{
-                    modificarClientes(url.get('id'));
-                }
+    <script>
+        // funcion para cargar datos
+        //            1:00:00 tutoria del 30 de agosto anulo lo anterior y dejó:
+        window.onload = function () {
+            let button_update = document.getElementById('btn-editar')
+            const url = new URLSearchParams(window.location.search);
+            cargarDatos(url.get('id'));
+
+            button_update.onclick = () => {
+                modificarClientes(url.get('id'));
             }
+        }
 
-        </script>
+    </script>
 
 </body>
 

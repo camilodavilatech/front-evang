@@ -1,5 +1,6 @@
 function mostrarDatos() {
     let request = sendRequest('clientes', 'GET', '');
+    console.log(request);
     let table = document.getElementById('clientes-table');
     table.innerHTML = "";
     request.onload = function () {
@@ -17,9 +18,8 @@ function mostrarDatos() {
             <td>${element.telefono}</td>
             <td>${element.direccion}</td>
             <td> 
-                <a href="/form_clientes.html?id=${element._id}">Editar</a>
-                <button type="button" class "btn btn-primary" onclick='window.location. +?id = ${element._id}"'>Editar</button>
-                <button type="button" class = "btn btn-danger" onclick= 'deleteClientes("${element._id}")'>Eliminar</button>
+                <a class="btn btn-primary" href="/form_clientes.html?id=${element._id}">Editar</a>
+                 <button type="button" class="btn btn-danger" onclick='deleteClientes("${element._id}")'>Eliminar</button>
             </td>
             </tr>
             `
@@ -27,10 +27,9 @@ function mostrarDatos() {
     }
     request.onerror = function () {
         table.innerHTML = `
-    <tr>
-    <td> colspan ="">Error al traer los datos</td>
-
-    </tr>        
+            <tr>
+                <td> colspan ="">Error al traer los datos</td>
+            </tr>        
     `
     }
 }
@@ -72,8 +71,8 @@ function cargarDatos(id) {
         let cor = document.getElementById("correo-n")
         let tel = document.getElementById("telefono-n")
         let dir = document.getElementById("direccion-n")
-        request.onload = function () {
 
+        request.onload = function () {
             let data = request.response;
             nom.value = data.nombre
             ape.value = data.apellidos
@@ -84,12 +83,11 @@ function cargarDatos(id) {
 
             console.log(data)
         }
-    }
-    request.onerror = function () {
-        alert("Error al guardar los datos")
-    }
 
-
+        request.onerror = function () {
+            alert("Error al guardar los datos")
+        }
+    }
 }
 function modificarClientes(id) {
     console.log(id)
@@ -101,13 +99,14 @@ function modificarClientes(id) {
     let dir = document.getElementById("direccion-n").value
     let data = { 'nombre': nom, 'apellidos': ape, 'documento': doc, 'correo': cor, 'telefono': tel, 'direccion': dir }
 
+    console.log(data)
+    let request = sendRequest(`clientes/${id}`, 'PUT', data);
 
-    let request = sendRequest('clientes/' + id, 'PUT', data);
     request.onload = function () {
-        window.location = 'clientes.html'
+        window.location.href = 'clientes.html'
     }
 
     request.onerror = function () {
-        alert("Error al modificar los datos")
+         alert("Error al modificar los datos")
     }
 }
